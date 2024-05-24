@@ -1,0 +1,9 @@
+Sample,Heavy,Smelly,Spotted,Scales,Poisonous
+a,0,0,0,0,0
+b,0,0,1,0,0
+c,1,1,0,1,0
+d,1,0,0,1,1
+e,0,1,1,0,1
+f,0,0,1,1,1
+g,0,0,0,1,1
+h,1,1,0,0,1

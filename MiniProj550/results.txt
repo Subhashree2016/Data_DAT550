@@ -1,0 +1,49 @@
+Vanishing gradient occurs even in relatively shallower networks also after repeated gradient updates not necessarily related to deeper networks. If you take a NN which is free from all the issues like vanishing and exploding gradient and add more layers it should improve performance. That’s what is meant by generally. 
+
+Redigert av Vinay Jayarama Setty på 11. mai i 9.55
+ 
+
+
+Hello, the solution for 4d in 2019 exam seems to be wrong. The minhash should be [1,1,2,1] but in the solution it says that D1 should be 6? How is this possible? 
+
+
+The minhash would be 1, 1, 2,1 so The minhash value for D4 is NOT 1 - False is the right answer. But The minhash value for D1 is 6 - True is the mistake.
+
+
+There are two ways of doing it, either take the row number in the permuted order. or take the index of the original row. Both are fine but you have to be consistent. So both 1, 1, 2, 1 and 6, 4, 4, 6 are valid minshahes. But in this case I should have clarified explicitly that you need to use the first method.  Have a look at this attached slide which shows both ways of computing the min hashes. But in tomorrow's exam I am sure there will be no confusion it will be explicitly mentioned, if this type of question is asked.
+
+
+
+Practice Exam
+
+> 6) Learning curves question : how can we tell that there is not enough training data ? the curve looks like a correct training curve.
+
+ 
+
+The validation curve is always slightly below training curve.  This indicates the model could benefit from more training data. It is neither overfit or underfit  
+
+ 
+
+Exam 2019
+
+>1) "The ith element has a higher probability of being included in the sample than jth element provided i < j, (ith element appears before jth)"
+
+This statement is true, because r/i > r/j if i < j, so the i-th sample has a higher probability of being included. If you meant probability of being kept in the final sample, this is not the correct wording. 
+
+ 
+
+No the wording is right probability of being included an item at any step of the algorithm also depends on probability that it also not evicted. So even though r/i > r/j the it element with probability 1/r has to survive not being evicted from the sample 
+
+ 
+
+> 6) How are we supposed to estimate if the variance is 2 or 4 just by looking at the data points ?
+
+ 
+
+By looking at the units in x-axis  
+
+ 
+
+> 7) NaN values can appear for both vanishing and the exploding gradients case, as both indeterminate forms will lead to NaNs
+
+So vanishing gradient literally means the gradient becomes vanishingly small or becomes zero or close to zero (https://en.wikipedia.org/wiki/Vanishing_gradient_problem (Lenker til en ekstern side.)). In RNNs typically gradient reaching 0 or close to 0 is what is meant by vanishing gradient and exploding gradient which grows to infinity is what is meant by a NaN gradient. 
